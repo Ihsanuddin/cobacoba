@@ -2,7 +2,16 @@
 dfgdfggdgdkhljgdlkjhgdljkghdklgjh
 
 
+function GetLangOpts($llcc, $adobeCJK) {
+	if (strlen($llcc) == 5) {
+		$lang = substr(strtolower($llcc),0,2);
+		$country = substr(strtoupper($llcc),3,2);
+	}
+	else { $lang = strtolower($llcc); $country = ''; }
+	$unifonts = "";
+	$coreSuitable = false;
 
+	switch($lang){
 	  CASE "en":
 	  CASE "ca":
 	  CASE "cy":
